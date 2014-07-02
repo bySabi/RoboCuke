@@ -1,0 +1,39 @@
+package com.iguanalab.app.RoboCuke;
+
+import org.robolectric.RobolectricTestRunner;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runner.Runner;
+import org.junit.runner.JUnitCore;
+import org.junit.runner.Request;
+import org.junit.runners.model.InitializationError;
+import java.io.IOException;
+
+@RunWith(RobolectricTestRunner.class)
+public class RunCukesTest {
+  @Test
+  public void runcukestest() {
+   System.out.println("RunCukesTest.runcukestest -- this.classloader: " + this.getClass().getClassLoader());
+      Runner r;
+      try {
+  //        Class<?> innerClass = this.getClass().getDeclaredClasses()[0];
+          //  r = new Cucumber(Class.forName(innerClass));
+   //      r = new Cucumber(innerClass);
+          r = new Cucumber(this.getClass().getDeclaredClasses()[0]);
+   //       r = new Cucumber(Class.forName(support.RunCukesTest$RunCukesTest1));
+
+      } catch (IOException e){
+          throw new RuntimeException(e);
+      } catch (InitializationError e){
+          throw new RuntimeException(e);
+      }
+      JUnitCore c = new JUnitCore();
+      c.run(Request.runner(r));
+  }
+
+  @RunWith(Cucumber.class)
+  @CucumberOptions(monochrome = true)
+  public class RunCukesTest1 {}
+}
