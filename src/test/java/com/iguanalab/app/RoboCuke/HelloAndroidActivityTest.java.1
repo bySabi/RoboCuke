@@ -1,0 +1,27 @@
+package com.iguanalab.app.RoboCuke;
+
+import android.app.Activity;
+import org.junit.runner.RunWith;
+import org.junit.Test;
+import org.robolectric.Robolectric;
+import org.robolectric.RobolectricTestRunner;
+
+import static org.junit.Assert.assertTrue;
+
+@RunWith(RobolectricTestRunner.class)
+public class HelloAndroidActivityTest {
+
+  @Test
+  public void titleIsCorrect() throws Exception {
+    Activity activity = Robolectric.setupActivity(HelloAndroidActivity.class);
+    System.out.println("title="+activity.getTitle().toString());
+    assertTrue(activity.getTitle().toString().equals("RoboCuke"));
+  }
+
+  @Test
+  public void titleIsCorrectError() throws Exception {
+    Activity activity = Robolectric.setupActivity(HelloAndroidActivity.class);
+    assertTrue(activity.getTitle().toString().equals("RoboCuke1"));
+  }
+
+}

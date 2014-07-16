@@ -1,6 +1,5 @@
 package com.iguanalab.app.RoboCuke;
 
-//import com.iguanalab.app.RoboCuke.R;
 import org.robolectric.RobolectricTestRunner;
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
@@ -11,7 +10,6 @@ import org.junit.runner.JUnitCore;
 import org.junit.runner.Request;
 import org.junit.runners.model.InitializationError;
 
-//import javax.print.attribute.standard.ReferenceUriSchemesSupported;
 import java.io.IOException;
 import java.lang.RuntimeException;
 
