@@ -1,0 +1,15 @@
+-------------------------------------------------------
+ T E S T S
+-------------------------------------------------------
+Running com.iguanalab.app.RoboCuke.RunCukesTest
+WARNING: no system properties value for ro.build.date.utc
+
+0 Scenarios
+0 Steps
+0m0.000s
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.783 sec - in com.iguanalab.app.RoboCuke.RunCukesTest
+
+Results :
+
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0

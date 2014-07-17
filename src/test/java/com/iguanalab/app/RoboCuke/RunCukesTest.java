@@ -13,8 +13,9 @@ import org.junit.runners.model.InitializationError;
 import java.io.IOException;
 import java.lang.RuntimeException;
 
-@RunWith(Cucumber.class)
+//@RunWith(Cucumber.class)
 //@RunWith(RobolectricTestRunner.class)
+@RunWith(RoboCucumber.class)
 @CucumberOptions(monochrome = true)
 public class RunCukesTest {
   @Test
